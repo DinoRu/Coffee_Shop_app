@@ -1,3 +1,6 @@
+import 'dart:ui';
+
+import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 
 import 'app_view.dart';
@@ -9,8 +12,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Coffee Shop App',
+      scrollBehavior: const MaterialScrollBehavior()
+        ..copyWith(dragDevices: {PointerDeviceKind.mouse}),
       debugShowCheckedModeBanner: false,
-      theme: ThemeData.from(colorScheme: const ColorScheme.dark()),
+      locale: DevicePreview.locale(context),
+      builder: DevicePreview.appBuilder,
+      theme: ThemeData(useMaterial3: true),
       home: const MyAppView(),
     );
   }

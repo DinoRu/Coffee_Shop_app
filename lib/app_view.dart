@@ -1,3 +1,4 @@
+import 'package:coffe_shop/screens/screens.dart';
 import 'package:flutter/material.dart';
 
 class MyAppView extends StatelessWidget {
@@ -5,8 +6,6 @@ class MyAppView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-
-    );
+    return const IntroductionScreen();
   }
 }
