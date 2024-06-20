@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       locale: DevicePreview.locale(context),
       builder: DevicePreview.appBuilder,
-      theme: ThemeData(useMaterial3: true),
+      theme: ThemeData(useMaterial3: false),
       home: const MyAppView(),
     );
   }

@@ -1,4 +1,5 @@
 import 'package:coffe_shop/data/tmp_data.dart';
+import 'package:coffe_shop/screens/screens.dart';
 import 'package:coffe_shop/theme/app_theme.dart';
 import 'package:coffe_shop/widgets/custom_filed_button.dart';
 import 'package:flutter/material.dart';
@@ -79,7 +80,10 @@ class IntroductionScreen extends StatelessWidget {
             height: 54,
             color: Apptheme.buttonBackground1Color,
             borderRadius: 16,
-            onTap: () {},
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (_) => const HomeScreen()));
+            },
             child: Text('Get Started', style: Apptheme.cardTitleSmall),
           ),
         )
